@@ -9,7 +9,7 @@ const getSum = () => {
     
     // Calculate the total sum
     prices.forEach(price => {
-        total += parseFloat(price.textContent);
+        total += parseFloat(price.textContent) || 0;
     });
     
     // Check if total row already exists, if so, remove it
@@ -33,5 +33,3 @@ const getSum = () => {
 };
 
 getSumBtn.addEventListener("click", getSum);
-
-
